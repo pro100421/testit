@@ -4,46 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>나와 동일한 체지방률의 동물은?</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
-        .container { max-width: 500px; margin: auto; }
-        input, button { margin: 10px; padding: 10px; font-size: 16px; }
-        #result { margin-top: 20px; font-size: 18px; font-weight: bold; }
-    </style>
+    <link rel="stylesheet" href="styles.css">  <!-- styles.css 파일을 올바르게 링크 -->
 </head>
 <body>
-<div class="container">
+<div class="container"> <!-- container 클래스를 사용하여 중앙 정렬 -->
     <h1>나와 동일한 체지방률의 동물은?</h1>
     <p>당신의 체지방률(%)을 입력하세요:</p>
-    <label for="bodyFat"></label><input type="number" id="bodyFat" placeholder="예: 18" min="1" max="60">
+    <label for="bodyFat"></label>
+    <input type="number" id="bodyFat" placeholder="예: 18" min="1" max="60">
     <button onclick="findAnimal()">결과 보기</button>
     <p id="result"></p>
 </div>
-
-<script>
-    const animals = [
-        { name: "치타", bodyFat: 3 },
-        { name: "말", bodyFat: 10 },
-        { name: "고양이", bodyFat: 15 },
-        { name: "개", bodyFat: 18 },
-        { name: "돼지", bodyFat: 24 },
-        { name: "고릴라", bodyFat: 30 },
-        { name: "곰", bodyFat: 50 }
-    ];
-
-    function findAnimal() {
-        let inputFat = parseInt(document.getElementById("bodyFat").value);
-        if (isNaN(inputFat) || inputFat < 1 || inputFat > 60) {
-            document.getElementById("result").innerText = "올바른 체지방률을 입력해주세요 (1~60%)";
-            return;
-        }
-
-        let closestAnimal = animals.reduce((prev, curr) =>
-            Math.abs(curr.bodyFat - inputFat) < Math.abs(prev.bodyFat - inputFat) ? curr : prev
-        );
-
-        document.getElementById("result").innerText = `당신과 비슷한 체지방률의 동물은 ${closestAnimal.name}입니다!`;
-    }
-</script>
+<script src="script.js"></script>
 </body>
 </html>
