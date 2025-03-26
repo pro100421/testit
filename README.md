@@ -20,7 +20,7 @@
 ├── 📂 public  # 정적 파일
 ├── 📂 src     # 소스 코드
 ├── 📄 index.html  # 메인 페이지
-├── 📄 styles.css  # 스타일 시트
+├── 📄 style.css  # 스타일 시트
 ├── 📄 script.js  # 기능 구현
 └── 📄 README.md  # 프로젝트 설명
 ```
