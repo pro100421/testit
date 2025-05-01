@@ -187,3 +187,10 @@ button:hover {
   color: #333; /* 제목 색상 */
   margin-bottom: 10px; /* 제목과 본문 사이 간격 */
 }
+
+#animalEmojis {
+  font-size: 4em;
+  text-align: center;
+  margin-top: 50px;
+  line-height: 1.5;
+}
