@@ -131,6 +131,8 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(response => response.text())
         .then(data => {
             guideContainer.innerHTML = data; // guide.html의 내용 삽입
+            setProductLink(key); // 동물 키에 따라 링크 삽입
+
         })
         .catch(error => {
             console.error("Error loading guide.html:", error);
@@ -155,4 +157,47 @@ function smoothScrollToBottom() {
             clearInterval(scrollInterval);  // 목표 위치에 도달하면 타이머 종료
         }
     });
+}
+
+function setProductLink(animalKey) {
+    const productLinkDiv = document.getElementById("productLink");
+    if (!productLinkDiv) return;
+
+
+    if (animalKey === "horse") {
+        productLinkDiv.innerHTML = `<a href="https://link.coupang.com/a/cM17ew" target="_blank" referrerpolicy="unsafe-url">
+    <img src="https://img2a.coupangcdn.com/image/affiliate/banner/26473da5dea224a94109c3929a3d9a1e@2x.jpg" alt="순잠 꿈속을 달리는 말 시리즈 인형, 블랙, 1개, 20cm" width="120" height="240"></a>`;
+    } else if (animalKey === "cheetah") {
+        productLinkDiv.innerHTML = `<iframe src="https://coupa.ng/cjERVN" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>`;
+    } else if (animalKey === "deer") {
+        productLinkDiv.innerHTML = `<iframe src="https://coupa.ng/cjEXGW" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>`;
+    } else if (animalKey === "cat") {
+        productLinkDiv.innerHTML = `<iframe src="https://coupa.ng/cjEXIB" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>`;
+    } else if (animalKey === "wolf") {
+        productLinkDiv.innerHTML = `<iframe src="https://coupa.ng/cjEXJ5" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>`;
+    } else if (animalKey === "dog") {
+        productLinkDiv.innerHTML = `<iframe src="https://coupa.ng/cjEXLj" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>`;
+    } else if (animalKey === "fox") {
+        productLinkDiv.innerHTML = `<iframe src="https://coupa.ng/cjEXLU" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>`;
+    } else if (animalKey === "pig") {
+        productLinkDiv.innerHTML = `<iframe src="https://coupa.ng/cjEX8W" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>`;
+    } else if (animalKey === "panda") {
+        productLinkDiv.innerHTML = `<iframe src="https://coupa.ng/cjEYab" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>`;
+    } else if (animalKey === "gorilla") {
+        productLinkDiv.innerHTML = `<iframe src="https://coupa.ng/cjEYbb" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>`;
+    } else if (animalKey === "elephant") {
+        productLinkDiv.innerHTML = `<iframe src="https://coupa.ng/cjEYbM" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>`;
+    } else if (animalKey === "hippo") {
+        productLinkDiv.innerHTML = `<iframe src="https://coupa.ng/cjEYcu" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>`;
+    } else if (animalKey === "bear") {
+        productLinkDiv.innerHTML = `<iframe src="https://coupa.ng/cjEYdp" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>`;
+    } else if (animalKey === "walrus") {
+        productLinkDiv.innerHTML = `<iframe src="https://coupa.ng/cjEYeZ" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>`;
+    } else if (animalKey === "seal") {
+        productLinkDiv.innerHTML = `<iframe src="https://coupa.ng/cjEYea" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>`;
+    } else {
+        productLinkDiv.innerHTML = `<a href="https://example.com/multi-use-product" target="_blank">
+        <button style="margin-top: 10px;">다용도 상품 보기</button>
+    </a>`;
+    }
 }
