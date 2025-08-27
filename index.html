@@ -10,10 +10,11 @@
 
 <h1 id="animalEmojis">🐆 🦌 🐴 🐱 🐺 🐶 🦊 🐷 🐼 🦍 🐘 🦛 🐻 🦭 🐬</h1>
 <div class="container"> <!-- container 클래스를 사용하여 중앙 정렬 -->
-    <h1>나와 동일한 체지방률의 동물은?</h1>
+    <h1>나와 동일한 체지방의 동물은?</h1>
     <p>당신의 체지방률(%)을 입력하세요:</p>
+    <p>(1~60%)</p>
     <label for="bodyFat"></label>
-    <input type="number" id="bodyFat" placeholder="예: 18" min="1" max="60">
+    <input type="number" id="bodyFat" placeholder="예: 18" min="1" max="60" onkeydown="if(event.key==='Enter'){findAnimal();}">
     <button onclick="findAnimal()">결과 보기</button>
     <p id="result"></p>
 </div>

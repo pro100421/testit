@@ -193,4 +193,17 @@ button:hover {
   text-align: center;
   margin-top: 50px;
   line-height: 1.5;
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+  animation: flowLeft 10s linear infinite;
+}
+
+@keyframes flowLeft {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
 }
